@@ -1,15 +1,19 @@
-import React from "react";
-import Products2 from "./components/Products2";
-import './App.css';
+import React from 'react'
+import { useState } from 'react'
+
 
 const App = () => {
+  const [count, setCount] = useState(0);
   return (
-    <div className="App">
-    <h2>Таньд санал болгох киноны жагсаалт</h2>
-      <h6>Адал явдалт,тулаант</h6>
-      <Products2/>
+    <div>
+      <h1>Counter App</h1>
+      <h4>{count}</h4>
+      <button style={{ background:"green"}} onClick ={() => setCount(count + 1)} >Increment</button>
+      <button style={{ background:"red"}} onClick={() => setCount(count - 1 )}>Decrement</button>
+      <button style={{ background:"gray"}} onClick={() => setCount(0)}>Reset </button>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
+
